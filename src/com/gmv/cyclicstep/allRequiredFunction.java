@@ -76,8 +76,6 @@ public class allRequiredFunction {
     }
 
 
-
-
     public void funkcjaGlowna() throws InterruptedException {
         float lenghtOfStep = getLengthOfStep(readLengthOfStep());
         int distanceToBeat = getDistanceOfRunning(readDistance());
@@ -100,6 +98,7 @@ public class allRequiredFunction {
         System.out.println("Czas to " + finnalyTime);
 
     }
+
     public void funkcjaGlowna(float steps, long stepsPerSecond) throws InterruptedException {
 
         long currentTime = System.currentTimeMillis();

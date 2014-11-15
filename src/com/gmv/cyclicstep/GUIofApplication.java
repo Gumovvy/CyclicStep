@@ -30,9 +30,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
     JLabel lSummaryBeatTime = new JLabel("");
     JLabel lSummarySteps = new JLabel("");
     JLabel lSummaryStepPerSecond = new JLabel("");
-    //variables
-    boolean visible = true;
-
+ 
 
     public GUIofApplication() {
         defaultView();
@@ -99,7 +97,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
         secondPanel.add(lSummaryBeatTime);
         lSummarySteps.setBounds(5, 40, 250, 25);
         secondPanel.add(lSummarySteps);
-        lSummaryStepPerSecond.setBounds(5, 55, 250,25);
+        lSummaryStepPerSecond.setBounds(5, 55, 250, 25);
         secondPanel.add(lSummaryStepPerSecond);
 
     }
@@ -155,8 +153,8 @@ public class GUIofApplication extends JFrame implements ActionListener {
 
             }
 
-        } catch (NumberFormatException nfe){
-            JOptionPane.showConfirmDialog(this,"Nie prawidlowy format danych.\nSprawdz czy nie podales przecinka zamiast kropki.","Blad skladni",JOptionPane.DEFAULT_OPTION,JOptionPane.ERROR_MESSAGE);
+        } catch (NumberFormatException nfe) {
+            JOptionPane.showConfirmDialog(this, "Nie prawidlowy format danych.\nSprawdz czy nie podales przecinka zamiast kropki.", "Blad skladni", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
         }
     }
 }

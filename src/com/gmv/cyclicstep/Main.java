@@ -3,7 +3,7 @@ package com.gmv.cyclicstep;
 public class Main {
     public static void main(String[] arg) throws InterruptedException {
         //allRequiredFunction alg = new allRequiredFunction();
-       // alg.funkcjaGlowna();
+        // alg.funkcjaGlowna();
         // alg.probaOtwarcia();
         GUIofApplication app = new GUIofApplication();
         app.setVisible(true);

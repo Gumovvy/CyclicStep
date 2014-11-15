@@ -9,8 +9,10 @@ import java.awt.event.ActionListener;
  * Created by gumovvy on 15.11.14.
  */
 public class GUIofApplication extends JFrame implements ActionListener {
-    JPanel panel1 = new JPanel();
+    JPanel firstPanel = new JPanel();
+    JPanel secondPanel = new JPanel();
     JButton oblicz = new JButton("Oblicz");
+    boolean visible = true;
 
 
     public GUIofApplication() {
@@ -18,19 +20,27 @@ public class GUIofApplication extends JFrame implements ActionListener {
         labelsView();
         textFieldsView();
         buttonsView();
+        viewPanels();
 
-        panel1.setLayout(null);
-        panel1.setBounds(0, 0, 1000, 150);
-        panel1.setBorder(BorderFactory.createBevelBorder(1));
-        add(panel1);
 
+    }
+
+    private void viewPanels() {
+        firstPanel.setLayout(null);
+        firstPanel.setBounds(0, 0, 1000, 130);
+        firstPanel.setBorder(BorderFactory.createBevelBorder(1));
+        add(firstPanel);
+        secondPanel.setLayout(null);
+        secondPanel.setBounds(0, 131, 1000, 150);
+        secondPanel.setBorder(BorderFactory.createBevelBorder(1));
+        add(secondPanel);
     }
 
     private JButton buttonsView() {
 
         oblicz.setBounds(10, 100, 80, 25);
         oblicz.addActionListener(this);
-        panel1.add(oblicz);
+        firstPanel.add(oblicz);
         return oblicz;
     }
 
@@ -43,10 +53,10 @@ public class GUIofApplication extends JFrame implements ActionListener {
         tfDistance.setBounds(160, 40, 165, 25);
         tfTimeToBeatinMinutes.setBounds(195, 70, 45, 25);
         tfTimeToBeatinSeconds.setBounds(280, 70, 45, 25);
-        panel1.add(tflenghtOfStep);
-        panel1.add(tfDistance);
-        panel1.add(tfTimeToBeatinMinutes);
-        panel1.add(tfTimeToBeatinSeconds);
+        firstPanel.add(tflenghtOfStep);
+        firstPanel.add(tfDistance);
+        firstPanel.add(tfTimeToBeatinMinutes);
+        firstPanel.add(tfTimeToBeatinSeconds);
     }
 
     private void labelsView() {
@@ -57,15 +67,16 @@ public class GUIofApplication extends JFrame implements ActionListener {
         JLabel lTimeToBeatinMinutes = new JLabel("min.");
         JLabel lTimeToBeatSeconds = new JLabel("sec.");
         lLenghtOfStep.setBounds(5, 10, 150, 25);
-        panel1.add(lLenghtOfStep);
+        firstPanel.add(lLenghtOfStep);
         lDistance.setBounds(5, 40, 150, 25);
-        panel1.add(lDistance);
+        firstPanel.add(lDistance);
         lTimeToBeat.setBounds(5, 70, 150, 25);
-        panel1.add(lTimeToBeat);
+        firstPanel.add(lTimeToBeat);
         lTimeToBeatinMinutes.setBounds(160, 70, 40, 25);
-        panel1.add(lTimeToBeatinMinutes);
+        firstPanel.add(lTimeToBeatinMinutes);
         lTimeToBeatSeconds.setBounds(245, 70, 40, 25);
-        panel1.add(lTimeToBeatSeconds);
+        firstPanel.add(lTimeToBeatSeconds);
+
     }
 
 
@@ -79,14 +90,27 @@ public class GUIofApplication extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Cyclic Step");
         setLayout(null);
+        setResizable(false);
+        secondPanel.setVisible(false);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
+
         if (source == oblicz) {
-            panel1.setVisible(false);
-            System.out.println("Siema");
+            System.out.println(visible + " przed");
+            if (visible == true) {
+                secondPanel.setVisible(true);
+                System.out.println("Siema");
+                visible = false;
+                System.out.println(visible + " wPO");
+            } else if (visible == false) {
+
+                secondPanel.setVisible(false);
+                System.out.println("Siema1");
+                visible = true;
+            }
 
         }
 

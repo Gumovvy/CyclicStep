@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1895354-442a-44e8-a1c3-43186e262343" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/Algorytm.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/Main.class" afterPath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmv/cyclicstep/AlgorytmTest1.java" afterPath="$PROJECT_DIR$/src/com/gmv/cyclicstep/AlgorytmTest1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmv/cyclicstep/Main.java" afterPath="$PROJECT_DIR$/src/com/gmv/cyclicstep/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java" afterPath="$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/GUIofApplication.class" afterPath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/GUIofApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java" afterPath="$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CyclicStep.iws" />
@@ -64,8 +59,8 @@
       <file leaf-file-name="GUIofApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27710843" vertical-offset="1032" max-vertical-offset="1800">
-              <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.57831323" vertical-offset="306" max-vertical-offset="2232">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -538,12 +533,12 @@
       <option name="number" value="Default" />
       <updated>1415549684596</updated>
       <workItem from="1415549687096" duration="1074000" />
-      <workItem from="1416057688253" duration="6308000" />
+      <workItem from="1416057688253" duration="7603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7382000" />
+    <option name="totallyTimeSpent" value="8677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="875" extended-state="0" />
@@ -552,7 +547,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09090909" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24455826" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -642,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27710843" vertical-offset="1032" max-vertical-offset="1800">
-          <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.57831323" vertical-offset="306" max-vertical-offset="2232">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

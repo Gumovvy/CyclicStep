@@ -1,5 +1,7 @@
 package com.gmv.cyclicstep;
 
+import javafx.scene.layout.Border;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -26,11 +28,11 @@ public class GUIofApplication extends JFrame implements ActionListener {
     JLabel lTimeToBeatinMinutes = new JLabel("min.");
     JLabel lTimeToBeatSeconds = new JLabel("sec.");
     JLabel lWarning = new JLabel("");
-    JLabel lSummary = new JLabel("Podsumowanie:");
+    JLabel lSummary = new JLabel("");
     JLabel lSummaryBeatTime = new JLabel("");
     JLabel lSummarySteps = new JLabel("");
     JLabel lSummaryStepPerSecond = new JLabel("");
- 
+
 
     public GUIofApplication() {
         defaultView();
@@ -48,8 +50,8 @@ public class GUIofApplication extends JFrame implements ActionListener {
         firstPanel.setBorder(BorderFactory.createBevelBorder(1));
         add(firstPanel);
         secondPanel.setLayout(null);
-        secondPanel.setBounds(0, 131, 1000, 150);
-        secondPanel.setBorder(BorderFactory.createBevelBorder(1));
+        secondPanel.setBounds(0, 131, 530, 143);
+        secondPanel.setBorder(BorderFactory.createTitledBorder("Podsumowanie"));
         add(secondPanel);
     }
 
@@ -87,7 +89,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
         lTimeToBeatSeconds.setBounds(245, 70, 40, 25);
         firstPanel.add(lTimeToBeatSeconds);
         firstPanel.add(lWarning);
-        lWarning.setBounds(330, 15, 300, 50);
+        lWarning.setBounds(330, 10, 300, 50);
         lWarning.setVisible(false);
         //Second Panel
 
@@ -136,19 +138,26 @@ public class GUIofApplication extends JFrame implements ActionListener {
 
 
             if (source == oblicz) {
-                if (seconds < 60) {
-                    secondPanel.setVisible(true);
-                    lWarning.setVisible(false);
+                if ((seconds > 59)) {
+
+                    lWarning.setText("Nie prawidlowy czas");
+                    lWarning.setVisible(true);
+                    secondPanel.setVisible(false);
 
 //                try {
 //                    aplication.funkcjaGlowna(steps, stepsPerSecond);
 //                } catch (InterruptedException e1) {
 //                    e1.printStackTrace();
 //                }
-                } else {
-                    lWarning.setText("Invalid time");
+                } else if((distanceOfRun == 0) || (lengthOfStep == 0) || (finalTime == 0)){
+                    JOptionPane.showConfirmDialog(this, "Dystans,kroki, i czas sumaryczny nie moze sie rownac zero.", "Blad danych", JOptionPane.DEFAULT_OPTION,JOptionPane.ERROR_MESSAGE);
                     lWarning.setVisible(true);
                     secondPanel.setVisible(false);
+
+                } else {
+                    secondPanel.setVisible(true);
+                    lWarning.setVisible(false);
+
                 }
 
             }

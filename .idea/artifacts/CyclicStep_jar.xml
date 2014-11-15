@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CyclicStep:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CyclicStep_jar</output-path>
+    <root id="archive" name="CyclicStep.jar">
+      <element id="module-output" name="CyclicStep" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit-4.11.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

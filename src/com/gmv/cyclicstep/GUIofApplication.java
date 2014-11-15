@@ -20,15 +20,16 @@ public class GUIofApplication extends JFrame implements ActionListener {
     JTextField tfTimeToBeatinMinutes = new JTextField("0");
     JTextField tfTimeToBeatinSeconds = new JTextField("0");
     //labels
-    JLabel lLenghtOfStep = new JLabel("Dlugosc Kroku: ");
+    JLabel lLenghtOfStep = new JLabel("Dlugosc kroku: ");
     JLabel lDistance = new JLabel("Distance: ");
     JLabel lTimeToBeat = new JLabel("Czas do pokonania: ");
     JLabel lTimeToBeatinMinutes = new JLabel("min.");
     JLabel lTimeToBeatSeconds = new JLabel("sec.");
+    JLabel lWarning = new JLabel("");
     JLabel lSummary = new JLabel("Podsumowanie:");
-    JLabel lWarning = new JLabel("Invalid time");
-    JLabel lSummaryBeatTime = new JLabel();
-    JLabel lSummarySteps = new JLabel();
+    JLabel lSummaryBeatTime = new JLabel("");
+    JLabel lSummarySteps = new JLabel("");
+    JLabel lSummaryStepPerSecond = new JLabel("");
     //variables
     boolean visible = true;
 
@@ -88,16 +89,18 @@ public class GUIofApplication extends JFrame implements ActionListener {
         lTimeToBeatSeconds.setBounds(245, 70, 40, 25);
         firstPanel.add(lTimeToBeatSeconds);
         firstPanel.add(lWarning);
-        lWarning.setBounds(330, 15, 100, 25);
+        lWarning.setBounds(330, 15, 300, 50);
         lWarning.setVisible(false);
         //Second Panel
 
         lSummary.setBounds(5, 5, 150, 25);
         secondPanel.add(lSummary);
-        lSummaryBeatTime.setBounds(5,25,250,25);
+        lSummaryBeatTime.setBounds(5, 25, 250, 25);
         secondPanel.add(lSummaryBeatTime);
-        lSummarySteps.setBounds(5,40,250,25);
+        lSummarySteps.setBounds(5, 40, 250, 25);
         secondPanel.add(lSummarySteps);
+        lSummaryStepPerSecond.setBounds(5, 55, 250,25);
+        secondPanel.add(lSummaryStepPerSecond);
 
     }
 
@@ -120,26 +123,40 @@ public class GUIofApplication extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         allRequiredFunction aplication = new allRequiredFunction();
-        float lengthOfStep = aplication.getLengthOfStep(Float.parseFloat(tflenghtOfStep.getText()));
-        int distanceOfRun = aplication.getDistanceOfRunning(Integer.parseInt(tfDistance.getText()));
-        int minutes = Integer.parseInt(tfTimeToBeatinMinutes.getText());
-        int seconds = Integer.parseInt(tfTimeToBeatinSeconds.getText());
-        aplication.finalTime(minutes, seconds);
-        float steps = aplication.countOfStep(distanceOfRun,lengthOfStep);
-        lSummaryBeatTime.setText("Chcesz pokonac czas: " + minutes + ":" + seconds);
-        lSummarySteps.setText("Musisz zrobić " + steps + " krokow.");
+        try {
+            float lengthOfStep = aplication.getLengthOfStep(Float.parseFloat(tflenghtOfStep.getText()));
+            int distanceOfRun = aplication.getDistanceOfRunning(Integer.parseInt(tfDistance.getText()));
+            int minutes = Integer.parseInt(tfTimeToBeatinMinutes.getText());
+            int seconds = Integer.parseInt(tfTimeToBeatinSeconds.getText());
+            int finalTime = aplication.finalTime(minutes, seconds);
+            float steps = aplication.countOfStep(distanceOfRun, lengthOfStep);
+            long stepsPerSecond = (long) aplication.amountStepsPerSeconds(finalTime, steps);
+
+            lSummaryBeatTime.setText("Chcesz pokonac czas: " + minutes + ":" + seconds);
+            lSummarySteps.setText("Musisz zrobić " + steps + " krokow.");
+            lSummaryStepPerSecond.setText("Musisz zrobic krok co " + stepsPerSecond + " milisekund.");
 
 
-        if (source == oblicz) {
-            if (seconds < 60) {
-                lWarning.setVisible(false);
-                secondPanel.setVisible(true);
-            } else {
-                lWarning.setVisible(true);
+            if (source == oblicz) {
+                if (seconds < 60) {
+                    secondPanel.setVisible(true);
+                    lWarning.setVisible(false);
+
+//                try {
+//                    aplication.funkcjaGlowna(steps, stepsPerSecond);
+//                } catch (InterruptedException e1) {
+//                    e1.printStackTrace();
+//                }
+                } else {
+                    lWarning.setText("Invalid time");
+                    lWarning.setVisible(true);
+                    secondPanel.setVisible(false);
+                }
 
             }
 
+        } catch (NumberFormatException nfe){
+            JOptionPane.showConfirmDialog(this,"Nie prawidlowy format danych.\nSprawdz czy nie podales przecinka zamiast kropki.","Blad skladni",JOptionPane.DEFAULT_OPTION,JOptionPane.ERROR_MESSAGE);
         }
-
     }
 }

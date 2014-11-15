@@ -20,7 +20,7 @@ public class allRequiredFunction {
 
     public float readLengthOfStep() {
         Scanner lenghtOfStep = new Scanner(System.in);
-        System.out.println("Enter lenght of step: ");
+        System.out.println("Enter length of step: ");
         return lenghtOfStep.nextFloat();
     }
 
@@ -48,11 +48,11 @@ public class allRequiredFunction {
         return finalTime;
     }
 
-    public float finalTime(int timeInMinutes, int timeInSeconds) {
-        float finalTime = (timeInMinutes * 60) + timeInSeconds;
+    public int finalTime(int timeInMinutes, int timeInSeconds) {
+        int finalTime = (timeInMinutes * 60) + timeInSeconds;
 
         //System.out.println("You want to beat time: " + timeInMinutes + ":" + timeInSeconds);
-       // System.out.println("Final time in second: " + finalTime);
+        // System.out.println("Final time in second: " + finalTime);
         return finalTime;
     }
 
@@ -71,9 +71,11 @@ public class allRequiredFunction {
     public double amountStepsPerSeconds(double timeToBeat, float steps) {
         double stepsPerTime = steps / timeToBeat;
         double stepsPerSeconds = 1000 / stepsPerTime;
-        System.out.println("On every seceond you have to make " + stepsPerTime + " steps. This means that you have to make a step every " + stepsPerSeconds + " miliseconds.");
+        //System.out.println("On every seceond you have to make " + stepsPerTime + " steps. This means that you have to make a step every " + stepsPerSeconds + " miliseconds.");
         return stepsPerSeconds;
     }
+
+
 
 
     public void funkcjaGlowna() throws InterruptedException {
@@ -82,9 +84,26 @@ public class allRequiredFunction {
         double timeToBeat = this.getTimeToBeat(readTimetoBeat());
         float steps = countOfStep(distanceToBeat, lenghtOfStep);
         long stepsPerSecond = (long) amountStepsPerSeconds(timeToBeat, steps);
+
         long currentTime = System.currentTimeMillis();
         for (int i = 0; i < steps; i++) {
 
+            Thread.sleep((int) stepsPerSecond);
+            System.out.println("Step");
+
+
+        }
+        long currentTimeAfterThreads = System.currentTimeMillis();
+
+        long finnalyTime = (currentTimeAfterThreads - currentTime);
+
+        System.out.println("Czas to " + finnalyTime);
+
+    }
+    public void funkcjaGlowna(float steps, long stepsPerSecond) throws InterruptedException {
+
+        long currentTime = System.currentTimeMillis();
+        for (int i = 0; i < steps; i++) {
             Thread.sleep((int) stepsPerSecond);
             System.out.println("Step");
 

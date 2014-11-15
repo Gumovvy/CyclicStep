@@ -15,10 +15,10 @@ public class GUIofApplication extends JFrame implements ActionListener {
     //buttons
     JButton oblicz = new JButton("Oblicz");
     //text fields
-    JTextField tflenghtOfStep = new JTextField("");
-    JTextField tfDistance = new JTextField("");
-    JTextField tfTimeToBeatinMinutes = new JTextField("");
-    JTextField tfTimeToBeatinSeconds = new JTextField("");
+    JTextField tflenghtOfStep = new JTextField("0");
+    JTextField tfDistance = new JTextField("0");
+    JTextField tfTimeToBeatinMinutes = new JTextField("0");
+    JTextField tfTimeToBeatinSeconds = new JTextField("0");
     //labels
     JLabel lLenghtOfStep = new JLabel("Dlugosc Kroku: ");
     JLabel lDistance = new JLabel("Distance: ");

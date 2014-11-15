@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1895354-442a-44e8-a1c3-43186e262343" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/GUIofApplication.class" afterPath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/GUIofApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/allRequiredFunction.class" afterPath="$PROJECT_DIR$/bin/com/gmv/cyclicstep/allRequiredFunction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java" afterPath="$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java" afterPath="$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CyclicStep.iws" />
@@ -44,14 +46,9 @@
       <file leaf-file-name="allRequiredFunction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1782">
-              <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-              <folding>
-                <element signature="e#230#231#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#346#347#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1221" max-vertical-offset="1854">
+              <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,8 +56,8 @@
       <file leaf-file-name="GUIofApplication.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57831323" vertical-offset="306" max-vertical-offset="2232">
-              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+            <state vertical-scroll-proportion="-0.079766534" vertical-offset="1805" max-vertical-offset="2718">
+              <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,8 +75,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/gmv/cyclicstep/AlgorytmTesta.java" />
         <option value="$PROJECT_DIR$/src/com/gmv/cyclicstep/Algorytm.java" />
-        <option value="$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java" />
         <option value="$PROJECT_DIR$/src/com/gmv/cyclicstep/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java" />
         <option value="$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java" />
       </list>
     </option>
@@ -116,6 +113,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -137,7 +135,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -147,7 +144,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="options.splitter.main.proportions" value="0.17433962" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -159,6 +156,7 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -526,6 +524,9 @@
       <AnalysisUIOptions />
     </option>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c1895354-442a-44e8-a1c3-43186e262343" name="Default" comment="" />
@@ -533,12 +534,14 @@
       <option name="number" value="Default" />
       <updated>1415549684596</updated>
       <workItem from="1415549687096" duration="1074000" />
-      <workItem from="1416057688253" duration="7603000" />
+      <workItem from="1416057688253" duration="10485000" />
+      <workItem from="1416081428203" duration="78000" />
+      <workItem from="1416081561581" duration="1110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8677000" />
+    <option name="totallyTimeSpent" value="12747000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="875" extended-state="0" />
@@ -555,7 +558,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277849" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30729833" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14017522" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -600,8 +603,82 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1113" max-vertical-offset="1854">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1802" max-vertical-offset="2556">
+          <caret line="114" column="38" selection-start-line="114" selection-start-column="38" selection-end-line="114" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="612">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1371" max-vertical-offset="1926">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2556">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bankomat/src/com/gmv/bankomat/Bankomat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.879518" vertical-offset="2430" max-vertical-offset="3384">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_25/jre/lib/rt.jar!/sun/misc/FloatingDecimal.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1795" max-vertical-offset="26766">
+          <caret line="121" column="0" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8.0_25/src.zip!/java/lang/Float.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33268481" vertical-offset="7407" max-vertical-offset="16236">
+          <caret line="450" column="0" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -616,29 +693,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/allRequiredFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1782">
-          <caret line="28" column="52" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../bankomat/src/com/gmv/bankomat/Bankomat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.879518" vertical-offset="2430" max-vertical-offset="3384">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1854">
+          <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gmv/cyclicstep/GUIofApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57831323" vertical-offset="306" max-vertical-offset="2232">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        <state vertical-scroll-proportion="-0.079766534" vertical-offset="1805" max-vertical-offset="2718">
+          <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

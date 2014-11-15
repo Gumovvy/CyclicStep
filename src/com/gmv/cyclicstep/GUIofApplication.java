@@ -9,9 +9,27 @@ import java.awt.event.ActionListener;
  * Created by gumovvy on 15.11.14.
  */
 public class GUIofApplication extends JFrame implements ActionListener {
+    //panels
     JPanel firstPanel = new JPanel();
     JPanel secondPanel = new JPanel();
+    //buttons
     JButton oblicz = new JButton("Oblicz");
+    //text fields
+    JTextField tflenghtOfStep = new JTextField("");
+    JTextField tfDistance = new JTextField("");
+    JTextField tfTimeToBeatinMinutes = new JTextField("");
+    JTextField tfTimeToBeatinSeconds = new JTextField("");
+    //labels
+    JLabel lLenghtOfStep = new JLabel("Dlugosc Kroku: ");
+    JLabel lDistance = new JLabel("Distance: ");
+    JLabel lTimeToBeat = new JLabel("Czas do pokonania: ");
+    JLabel lTimeToBeatinMinutes = new JLabel("min.");
+    JLabel lTimeToBeatSeconds = new JLabel("sec.");
+    JLabel lSummary = new JLabel("Podsumowanie:");
+    JLabel lWarning = new JLabel("Invalid time");
+    JLabel lSummaryBeatTime = new JLabel();
+    JLabel lSummarySteps = new JLabel();
+    //variables
     boolean visible = true;
 
 
@@ -45,10 +63,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
     }
 
     private void textFieldsView() {
-        JTextField tflenghtOfStep = new JTextField("");
-        JTextField tfDistance = new JTextField("");
-        JTextField tfTimeToBeatinMinutes = new JTextField("");
-        JTextField tfTimeToBeatinSeconds = new JTextField("");
+
         tflenghtOfStep.setBounds(160, 10, 165, 25);
         tfDistance.setBounds(160, 40, 165, 25);
         tfTimeToBeatinMinutes.setBounds(195, 70, 45, 25);
@@ -60,12 +75,8 @@ public class GUIofApplication extends JFrame implements ActionListener {
     }
 
     private void labelsView() {
-        JLabel lLenghtOfStep = new JLabel("Dlugosc Kroku: ");
-        JLabel lDistance = new JLabel("Distance: ");
-        JLabel lTimeToBeat = new JLabel("Czas do pokonania: ");
-        JLabel lPodsumowanie = new JLabel("Podsumowanie");
-        JLabel lTimeToBeatinMinutes = new JLabel("min.");
-        JLabel lTimeToBeatSeconds = new JLabel("sec.");
+        //First Panel
+
         lLenghtOfStep.setBounds(5, 10, 150, 25);
         firstPanel.add(lLenghtOfStep);
         lDistance.setBounds(5, 40, 150, 25);
@@ -76,6 +87,17 @@ public class GUIofApplication extends JFrame implements ActionListener {
         firstPanel.add(lTimeToBeatinMinutes);
         lTimeToBeatSeconds.setBounds(245, 70, 40, 25);
         firstPanel.add(lTimeToBeatSeconds);
+        firstPanel.add(lWarning);
+        lWarning.setBounds(330, 15, 100, 25);
+        lWarning.setVisible(false);
+        //Second Panel
+
+        lSummary.setBounds(5, 5, 150, 25);
+        secondPanel.add(lSummary);
+        lSummaryBeatTime.setBounds(5,25,250,25);
+        secondPanel.add(lSummaryBeatTime);
+        lSummarySteps.setBounds(5,40,250,25);
+        secondPanel.add(lSummarySteps);
 
     }
 
@@ -97,19 +119,24 @@ public class GUIofApplication extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
+        allRequiredFunction aplication = new allRequiredFunction();
+        float lengthOfStep = aplication.getLengthOfStep(Float.parseFloat(tflenghtOfStep.getText()));
+        int distanceOfRun = aplication.getDistanceOfRunning(Integer.parseInt(tfDistance.getText()));
+        int minutes = Integer.parseInt(tfTimeToBeatinMinutes.getText());
+        int seconds = Integer.parseInt(tfTimeToBeatinSeconds.getText());
+        aplication.finalTime(minutes, seconds);
+        float steps = aplication.countOfStep(distanceOfRun,lengthOfStep);
+        lSummaryBeatTime.setText("Chcesz pokonac czas: " + minutes + ":" + seconds);
+        lSummarySteps.setText("Musisz zrobić " + steps + " krokow.");
+
 
         if (source == oblicz) {
-            System.out.println(visible + " przed");
-            if (visible == true) {
+            if (seconds < 60) {
+                lWarning.setVisible(false);
                 secondPanel.setVisible(true);
-                System.out.println("Siema");
-                visible = false;
-                System.out.println(visible + " wPO");
-            } else if (visible == false) {
+            } else {
+                lWarning.setVisible(true);
 
-                secondPanel.setVisible(false);
-                System.out.println("Siema1");
-                visible = true;
             }
 
         }

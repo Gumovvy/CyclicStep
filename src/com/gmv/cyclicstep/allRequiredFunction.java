@@ -48,9 +48,17 @@ public class allRequiredFunction {
         return finalTime;
     }
 
+    public float finalTime(int timeInMinutes, int timeInSeconds) {
+        float finalTime = (timeInMinutes * 60) + timeInSeconds;
+
+        //System.out.println("You want to beat time: " + timeInMinutes + ":" + timeInSeconds);
+       // System.out.println("Final time in second: " + finalTime);
+        return finalTime;
+    }
+
 
     public float countOfStep(int distance, float step) {
-        System.out.println("You have to make " + distance / step + " steps.s");
+        //System.out.println("You have to make " + distance / step + " steps.");
         return distance / step;
     }
 

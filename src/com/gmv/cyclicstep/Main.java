@@ -1,28 +1,28 @@
 package com.gmv.cyclicstep;
 
-import java.sql.Time;
-
 public class Main {
-	public static void main(String[] arg) throws InterruptedException {
-		Algorytm alg = new Algorytm();
-		alg.funkcjaGlowna();
-		// alg.probaOtwarcia();
+    public static void main(String[] arg) throws InterruptedException {
+        // allRequiredFunction alg = new allRequiredFunction();
+        // alg.funkcjaGlowna();
+        // alg.probaOtwarcia();
+        GUIofApplication app = new GUIofApplication();
+        app.setVisible(true);
 
-	}
+    }
 
-	// @Override
-	// public void run() {
-	// Algorytm alg = new Algorytm();
-	// float dlugoscKroku = alg.dlugoscKroku();
-	// int dystansDoPokonania = alg.dystansBiegu();
-	// double czasDoPokonania = alg.czasDoPokonania();
-	// float kroki = alg.obliczenieKrokow(dystansDoPokonania, dlugoscKroku);
-	// //alg.obliczenieKrokowNaSekunde(czasDoPokonania, kroki);
-	// long krokNaSekunde = (long) alg.iloscKrokowNaSekunde(czasDoPokonania,kroki);
-	// double krokDoWatku = (krokNaSekunde * 1000);
-	// //System.out.println("Krok " + aaa + " " + krokDoWatku);
-	// // System.out.println("krokkkk: " + krokDoWatku);
-	//
-	// }
+//	@Override
+//	public void run() {
+//	allRequiredFunction alg = new allRequiredFunction();
+//	float dlugoscKroku = alg.getLengthOfStep();
+//
+//	double czasDoPokonania = alg.getTimeToBeat();
+//	float kroki = alg.countOfStep(dystansDoPokonania, dlugoscKroku);
+//	alg.stepsPerSeconds(czasDoPokonania, kroki);
+//	long krokNaSekunde = (long) alg.amountStepsPerSeconds(czasDoPokonania, kroki);
+//	double krokDoWatku = (krokNaSekunde * 1000);
+//	//System.out.println("Krok " + aaa + " " + krokDoWatku);
+//	// System.out.println("krokkkk: " + krokDoWatku);
 
 }
+
+

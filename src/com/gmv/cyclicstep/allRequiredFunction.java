@@ -3,99 +3,90 @@ package com.gmv.cyclicstep;
 import java.util.Scanner;
 
 public class allRequiredFunction {
-    private int timeToBeat;
 
-    public static float lengthOfStep(float dlugosc) {
 
-        return dlugosc;
+    public static float getLengthOfStep(float lenght) {
+
+        return lenght;
     }
 
-    public static float readLengthOfStep() {
-        Scanner dlugoscKroku = new Scanner(System.in);
-        System.out.println("Podaj dlugosc kroku w metrach: ");
-        return dlugoscKroku.nextFloat();
+    public int getDistanceOfRunning(int distance) {
+        return distance;
     }
 
-    public int distanceOfRunning(int dystans) {
-        //Scanner dystansDoPrzebiegniecia = new Scanner(System.in);
-        //System.out.println("Podaj dystans w metrach: ");
-        //int dystans = dystansDoPrzebiegniecia.nextInt();
-        //int dystans=100;
-        return dystans;
+    public float getTimeToBeat(float timeTobeat) {
+        return timeTobeat;
     }
 
-    public int czytajDystans() {
-        Scanner dystansDoPrzebiegniecia = new Scanner(System.in);
-        System.out.println("Podaj dystans w metrach: ");
-        int dystans = dystansDoPrzebiegniecia.nextInt();
-        return dystans;
+    public float readLengthOfStep() {
+        Scanner lenghtOfStep = new Scanner(System.in);
+        System.out.println("Enter lenght of step: ");
+        return lenghtOfStep.nextFloat();
     }
 
-    public float czasDoPokonania() {
-        Scanner czasDoPokonania = new Scanner(System.in);
-        System.out.println("Podaj minuty: ");
-        int czasMinuty = czasDoPokonania.nextInt();
-        System.out.println("Podaj sekundy: ");
-        int czasSekundy = czasDoPokonania.nextInt();
-        while (czasSekundy > 59) {
-            System.out.println("Czas sekund nie moze byc w�kszy niz 59");
-            czasSekundy = czasDoPokonania.nextInt();
+    public int readDistance() {
+        Scanner distanceToBeat = new Scanner(System.in);
+        System.out.println("Enter distance to beat: ");
+        int distance = distanceToBeat.nextInt();
+        return distance;
+    }
+
+    public float readTimetoBeat() {
+        Scanner timeToBeat = new Scanner(System.in);
+        System.out.println("Enter minutes: ");
+        int timeInMinutes = timeToBeat.nextInt();
+        System.out.println("Enter seconds: ");
+        int timeInSeconds = timeToBeat.nextInt();
+        while (timeInSeconds > 59) {
+            System.out.println("Time of second cannot be more than 59");
+            timeInSeconds = timeToBeat.nextInt();
         }
-        float czasKoncowy = (czasMinuty * 60) + czasSekundy;
+        float finalTime = (timeInMinutes * 60) + timeInSeconds;
 
-        System.out.println("Czyli chcesz pobic czas: " + czasMinuty + ":" + czasSekundy);
-        System.out.println("Czas koncowy w sekundach: " + czasKoncowy);
-        return czasKoncowy;
+        System.out.println("You want to beat time: " + timeInMinutes + ":" + timeInSeconds);
+        System.out.println("Final time in second: " + finalTime);
+        return finalTime;
     }
 
-    public float getTimeToBeat() {
 
-        return this.timeToBeat;
+    public float countOfStep(int distance, float step) {
+        System.out.println("You have to make " + distance / step + " steps.s");
+        return distance / step;
     }
 
-    public float obliczenieKrokow(int dystans, float krok) {
-        System.out.println("Musisz zrobic " + dystans / krok + " krok�w.");
-        return dystans / krok;
-    }
-
-    public float obliczenieKrokowNaSekunde(float czasDoPokonania, float kroki) {
-        double krokiPrzezCzas = kroki / czasDoPokonania;
-        // double krokiNaSekunde =krokiPrzezCzas/100;
-        // System.out.println("Na ka�da sekunde musisz zrobic " + krokiPrzezCzas
-        // + " krok�w. Czyli co: " + Math.round(krokiNaSekunde*10000) +
-        // " setnych musisz zrobic krok" );
-        return kroki / czasDoPokonania;
+    public float stepsPerSeconds(float timeToBeat, float steps) {
+        double stepsDivedeTime = steps / timeToBeat;
+        return steps / timeToBeat;
 
     }
 
-    public double iloscKrokowNaSekunde(double czasDoPokonania, float kroki) {
-        double krokiPrzezCzas = kroki / czasDoPokonania;
-        double krokiNaSekunde = 1000 / krokiPrzezCzas;
-        System.out.println("Na ka�da sekunde musisz zrobic " + krokiPrzezCzas + " krok�w. Czyli co: " + krokiNaSekunde + " setnych musisz zrobic krok");
-        return krokiNaSekunde;
+    public double amountStepsPerSeconds(double timeToBeat, float steps) {
+        double stepsPerTime = steps / timeToBeat;
+        double stepsPerSeconds = 1000 / stepsPerTime;
+        System.out.println("On every seceond you have to make " + stepsPerTime + " steps. This means that you have to make a step every " + stepsPerSeconds + " miliseconds.");
+        return stepsPerSeconds;
     }
 
 
     public void funkcjaGlowna() throws InterruptedException {
-        float dlugoscKroku = lengthOfStep();
-        int dystansDoPokonania = distanceOfRunning(czytajDystans());
-        double czasDoPokonania = czasDoPokonania();
-        float kroki = obliczenieKrokow(dystansDoPokonania, dlugoscKroku);
-        long krokNaSekunde = (long) iloscKrokowNaSekunde(czasDoPokonania, kroki);
-        long czas1 = System.currentTimeMillis();
-        for (int i = 0; i < kroki; i++) {
+        float lenghtOfStep = getLengthOfStep(readLengthOfStep());
+        int distanceToBeat = getDistanceOfRunning(readDistance());
+        double timeToBeat = this.getTimeToBeat(readTimetoBeat());
+        float steps = countOfStep(distanceToBeat, lenghtOfStep);
+        long stepsPerSecond = (long) amountStepsPerSeconds(timeToBeat, steps);
+        long currentTime = System.currentTimeMillis();
+        for (int i = 0; i < steps; i++) {
 
-            Thread.sleep((int) krokNaSekunde);
-            // probaOtwarcia(String.valueOf(i + "\n"));
-            System.out.println("krok");
-            // System.out.println(i);
+            Thread.sleep((int) stepsPerSecond);
+            System.out.println("Step");
+
 
         }
-        long czas2 = System.currentTimeMillis();
+        long currentTimeAfterThreads = System.currentTimeMillis();
 
-        long czasDokladny = (czas2 - czas1);
+        long finnalyTime = (currentTimeAfterThreads - currentTime);
 
-        System.out.println("Czas to " + czasDokladny);
+        System.out.println("Czas to " + finnalyTime);
 
     }
 

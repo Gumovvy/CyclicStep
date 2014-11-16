@@ -1,7 +1,5 @@
 package com.gmv.cyclicstep;
 
-import javafx.scene.layout.Border;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -122,7 +120,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
-        allRequiredFunction aplication = new allRequiredFunction();
+        RequiredMethods aplication = new RequiredMethods();
         try {
             float lengthOfStep = aplication.getLengthOfStep(Float.parseFloat(tflenghtOfStep.getText()));
             int distanceOfRun = aplication.getDistanceOfRunning(Integer.parseInt(tfDistance.getText()));
@@ -149,8 +147,8 @@ public class GUIofApplication extends JFrame implements ActionListener {
 //                } catch (InterruptedException e1) {
 //                    e1.printStackTrace();
 //                }
-                } else if((distanceOfRun == 0) || (lengthOfStep == 0) || (finalTime == 0)){
-                    JOptionPane.showConfirmDialog(this, "Dystans,kroki, i czas sumaryczny nie moze sie rownac zero.", "Blad danych", JOptionPane.DEFAULT_OPTION,JOptionPane.ERROR_MESSAGE);
+                } else if ((distanceOfRun == 0) || (lengthOfStep == 0) || (finalTime == 0)) {
+                    JOptionPane.showConfirmDialog(this, "Dystans, kroki, i czas sumaryczny nie moze sie rownac zero.", "Blad danych", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
                     lWarning.setVisible(true);
                     secondPanel.setVisible(false);
 

@@ -2,7 +2,7 @@ package com.gmv.cyclicstep;
 
 import java.util.Scanner;
 
-public class allRequiredFunction {
+public class RequiredMethods {
 
 
     public static float getLengthOfStep(float lenght) {
@@ -71,7 +71,7 @@ public class allRequiredFunction {
     public double amountStepsPerSeconds(double timeToBeat, float steps) {
         double stepsPerTime = steps / timeToBeat;
         double stepsPerSeconds = 1000 / stepsPerTime;
-        //System.out.println("On every seceond you have to make " + stepsPerTime + " steps. This means that you have to make a step every " + stepsPerSeconds + " miliseconds.");
+        System.out.println("On every seceond you have to make " + stepsPerTime + " steps. This means that you have to make a step every " + stepsPerSeconds + " miliseconds.");
         return stepsPerSeconds;
     }
 
@@ -79,32 +79,66 @@ public class allRequiredFunction {
     public void funkcjaGlowna() throws InterruptedException {
         float lenghtOfStep = getLengthOfStep(readLengthOfStep());
         int distanceToBeat = getDistanceOfRunning(readDistance());
-        double timeToBeat = this.getTimeToBeat(readTimetoBeat());
+        double timeToBeat = getTimeToBeat(readTimetoBeat());
         float steps = countOfStep(distanceToBeat, lenghtOfStep);
         long stepsPerSecond = (long) amountStepsPerSeconds(timeToBeat, steps);
+        System.out.printf("Wybierz rodzaj  algorytmu \n 1.Staly \n 2.Lokomotywa");
+        Scanner przyspieszenie = new Scanner(System.in);
+        int przyspieszneieInt = przyspieszenie.nextInt();
+        if (przyspieszneieInt == 1) {
+            long currentTime = System.currentTimeMillis();
+            for (int i = 0; i < steps; i++) {
 
-        long currentTime = System.currentTimeMillis();
-        for (int i = 0; i < steps; i++) {
+                Thread.sleep((int) stepsPerSecond);
+                System.out.println("Step");
 
-            Thread.sleep((int) stepsPerSecond);
-            System.out.println("Step");
 
+            }
+            long currentTimeAfterThreads = System.currentTimeMillis();
+
+            long finnalyTime = (currentTimeAfterThreads - currentTime);
+
+            System.out.println("Czas to " + finnalyTime);
+        } else if (przyspieszneieInt == 2) {
+            long currentTime = System.currentTimeMillis();
+            int milis = 100;
+            int timeAfterThirdStep = 0;
+            for (int i = 0; i < steps; i++) {
+
+                long currentTimeInLoop = System.currentTimeMillis();
+                if (i < 3) {
+
+                    Thread.sleep((int) stepsPerSecond + milis);
+                    System.out.println("Step " + (System.currentTimeMillis() - currentTimeInLoop));
+                    //timeAfterThirdStep = (int) (timeAfterThirdStep + (System.currentTimeMillis() - currentTimeInLoop));
+
+                } else {
+                    //int trueSteps = (int) ((int) stepsPerSecond - (225/steps));
+                    //System.out.println("True steps " + timeAfterThirdStep);
+                    Thread.sleep((long) ((int) stepsPerSecond - (225 / (steps - 3))));
+                    System.out.println("Step " + (System.currentTimeMillis() - currentTimeInLoop));
+
+                }
+                milis = milis - 25;
+            }
+            long currentTimeAfterThreads = System.currentTimeMillis();
+
+            long finnalyTime = (currentTimeAfterThreads - currentTime);
+            System.out.println("Czas to " + finnalyTime);
+
+        } else if (przyspieszneieInt != 1 && przyspieszneieInt != 2) {
+            System.out.printf("Nie wybrales algortmu");
 
         }
-        long currentTimeAfterThreads = System.currentTimeMillis();
-
-        long finnalyTime = (currentTimeAfterThreads - currentTime);
-
-        System.out.println("Czas to " + finnalyTime);
-
     }
 
     public void funkcjaGlowna(float steps, long stepsPerSecond) throws InterruptedException {
 
         long currentTime = System.currentTimeMillis();
         for (int i = 0; i < steps; i++) {
+
             Thread.sleep((int) stepsPerSecond);
-            System.out.println("Step");
+            System.out.println("Step" + (System.currentTimeMillis() - currentTime));
 
 
         }

@@ -2,17 +2,17 @@ package com.gmv.cyclicstep;
 
 public class Main {
     public static void main(String[] arg) throws InterruptedException {
-        //allRequiredFunction alg = new allRequiredFunction();
-        // alg.funkcjaGlowna();
+        RequiredMethods alg = new RequiredMethods();
+        alg.funkcjaGlowna();
         // alg.probaOtwarcia();
-        GUIofApplication app = new GUIofApplication();
-        app.setVisible(true);
+        //GUIofApplication app = new GUIofApplication();
+        //app.setVisible(true);
 
     }
 
 //	@Override
 //	public void run() {
-//	allRequiredFunction alg = new allRequiredFunction();
+//RequiredMethods alg = new RequiredMethods();
 //	float dlugoscKroku = alg.getLengthOfStep();
 //
 //	double czasDoPokonania = alg.getTimeToBeat();

@@ -9,20 +9,24 @@ import java.awt.event.ActionListener;
  * Created by gumovvy on 15.11.14.
  */
 public class GUIofApplication extends JFrame implements ActionListener {
+    //Properies
+    SetupStringsInGUI strings = new SetupStringsInGUI();
+
+
     //panels
     JPanel firstPanel = new JPanel();
     JPanel secondPanel = new JPanel();
     //buttons
-    JButton oblicz = new JButton("Oblicz");
+    JButton oblicz = new JButton(strings.setStrings("calc"));
     //text fields
     JTextField tflenghtOfStep = new JTextField("0");
     JTextField tfDistance = new JTextField("0");
     JTextField tfTimeToBeatinMinutes = new JTextField("0");
     JTextField tfTimeToBeatinSeconds = new JTextField("0");
     //labels
-    JLabel lLenghtOfStep = new JLabel("Długość kroku: ");
-    JLabel lDistance = new JLabel("Dystans: ");
-    JLabel lTimeToBeat = new JLabel("Czas do pokonania: ");
+    JLabel lLenghtOfStep = new JLabel(strings.setStrings("lenOfStp"));
+    JLabel lDistance = new JLabel(strings.setStrings("dist"));
+    JLabel lTimeToBeat = new JLabel(strings.setStrings("timeToBeat"));
     JLabel lTimeToBeatinMinutes = new JLabel("min.");
     JLabel lTimeToBeatSeconds = new JLabel("sec.");
     JLabel lWarning = new JLabel("");
@@ -49,13 +53,13 @@ public class GUIofApplication extends JFrame implements ActionListener {
         add(firstPanel);
         secondPanel.setLayout(null);
         secondPanel.setBounds(0, 131, 530, 143);
-        secondPanel.setBorder(BorderFactory.createTitledBorder("Podsumowanie"));
+        secondPanel.setBorder(BorderFactory.createTitledBorder(strings.setStrings("summ")));
         add(secondPanel);
     }
 
     private JButton buttonsView() {
 
-        oblicz.setBounds(10, 100, 80, 25);
+        oblicz.setBounds(10, 100, strings.setStrings("calc").length() + 100, 25);
         oblicz.addActionListener(this);
         firstPanel.add(oblicz);
         return oblicz;
@@ -97,7 +101,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
         secondPanel.add(lSummaryBeatTime);
         lSummarySteps.setBounds(5, 40, 250, 25);
         secondPanel.add(lSummarySteps);
-        lSummaryStepPerSecond.setBounds(5, 55, 250, 25);
+        lSummaryStepPerSecond.setBounds(5, 55, 350, 25);
         secondPanel.add(lSummaryStepPerSecond);
 
     }
@@ -130,15 +134,15 @@ public class GUIofApplication extends JFrame implements ActionListener {
             float steps = aplication.countOfStep(distanceOfRun, lengthOfStep);
             long stepsPerSecond = (long) aplication.amountStepsPerSeconds(finalTime, steps);
 
-            lSummaryBeatTime.setText("Chcesz pokonac czas: " + minutes + ":" + seconds);
-            lSummarySteps.setText("Musisz zrobić " + steps + " krokow.");
-            lSummaryStepPerSecond.setText("Musisz zrobic krok co " + stepsPerSecond + " milisekund.");
+            lSummaryBeatTime.setText(strings.setStrings("wantToBeat") + " " + minutes + ":" + seconds);
+            lSummarySteps.setText(strings.setStrings("haveToMake") + " " + steps + " " + strings.setStrings("step"));
+            lSummaryStepPerSecond.setText(strings.setStrings("stepsToMake") + " " + stepsPerSecond + " " + strings.setStrings("milis"));
 
 
             if (source == oblicz) {
                 if ((seconds > 59)) {
 
-                    lWarning.setText("Nie prawidlowy czas");
+                    lWarning.setText(strings.setStrings("invalidTime"));
                     lWarning.setVisible(true);
                     secondPanel.setVisible(false);
 
@@ -148,7 +152,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
 //                    e1.printStackTrace();
 //                }
                 } else if ((distanceOfRun == 0) || (lengthOfStep == 0) || (finalTime == 0)) {
-                    JOptionPane.showConfirmDialog(this, "Dystans, kroki, i czas sumaryczny nie moze sie rownac zero.", "Blad danych", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showConfirmDialog(this, strings.setStrings("error1"), strings.setStrings("wrongData"), JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
                     lWarning.setVisible(true);
                     secondPanel.setVisible(false);
 
@@ -161,7 +165,7 @@ public class GUIofApplication extends JFrame implements ActionListener {
             }
 
         } catch (NumberFormatException nfe) {
-            JOptionPane.showConfirmDialog(this, "Nie prawidlowy format danych.\nSprawdz czy nie podales przecinka zamiast kropki.", "Blad skladni", JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showConfirmDialog(this, strings.setStrings("invalidFormat"), strings.setStrings("simpleInvalidFormat"), JOptionPane.DEFAULT_OPTION, JOptionPane.ERROR_MESSAGE);
         }
     }
 }

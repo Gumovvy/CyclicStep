@@ -1,6 +1,8 @@
 package com.gmv.cyclicstep;
 
+import java.util.Hashtable;
 import java.util.Scanner;
+
 
 public class RequiredMethods {
 

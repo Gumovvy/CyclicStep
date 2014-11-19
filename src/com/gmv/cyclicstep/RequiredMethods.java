@@ -1,8 +1,6 @@
 package com.gmv.cyclicstep;
 
-import java.util.Hashtable;
 import java.util.Scanner;
-
 
 public class RequiredMethods {
 
@@ -49,6 +47,22 @@ public class RequiredMethods {
         System.out.println("Final time in second: " + finalTime);
         return finalTime;
     }
+    public float MockedreadTimetoBeat(float minutes, float seconds) {
+//        Scanner timeToBeat = new Scanner(System.in);
+//        System.out.println("Enter minutes: ");
+//        int timeInMinutes = timeToBeat.nextInt();
+//        System.out.println("Enter seconds: ");
+//        int timeInSeconds = timeToBeat.nextInt();
+//        while (seconds > 59) {
+//            System.out.println("Time of second cannot be more than 59");
+//            timeInSeconds = timeToBeat.nextInt();
+//        }
+        float finalTime = (minutes * 60) + seconds;
+
+//        System.out.println("You want to beat time: " + timeInMinutes + ":" + timeInSeconds);
+//        System.out.println("Final time in second: " + finalTime);
+        return finalTime;
+    }
 
     public int finalTime(int timeInMinutes, int timeInSeconds) {
         int finalTime = (timeInMinutes * 60) + timeInSeconds;
@@ -70,12 +84,14 @@ public class RequiredMethods {
 
     }
 
+
     public double amountStepsPerSeconds(double timeToBeat, float steps) {
         double stepsPerTime = steps / timeToBeat;
         double stepsPerSeconds = 1000 / stepsPerTime;
-        System.out.println("On every seceond you have to make " + stepsPerTime + " steps. This means that you have to make a step every " + stepsPerSeconds + " miliseconds.");
+       // System.out.println("On every seceond you have to make " + stepsPerTime + " steps. This means that you have to make a step every " + stepsPerSeconds + " miliseconds.");
         return stepsPerSeconds;
     }
+
 
 
     public void funkcjaGlowna() throws InterruptedException {
@@ -134,7 +150,7 @@ public class RequiredMethods {
         }
     }
 
-    public void funkcjaGlowna(float steps, long stepsPerSecond) throws InterruptedException {
+    public void MOCKEDfunkcjaGlowna(float steps, long stepsPerSecond) throws InterruptedException {
 
         long currentTime = System.currentTimeMillis();
         for (int i = 0; i < steps; i++) {

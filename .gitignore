@@ -1,2 +1,11 @@
 *.xml
 .idea
+.classpath
+.project
+.settings/
+CyclicStep.iml
+bin/
+nowy1
+out/
+target/
+

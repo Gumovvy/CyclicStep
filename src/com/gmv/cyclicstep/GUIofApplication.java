@@ -20,8 +20,8 @@ public class GUIofApplication extends JFrame implements ActionListener {
     JTextField tfTimeToBeatinMinutes = new JTextField("0");
     JTextField tfTimeToBeatinSeconds = new JTextField("0");
     //labels
-    JLabel lLenghtOfStep = new JLabel("Dlugosc kroku: ");
-    JLabel lDistance = new JLabel("Distance: ");
+    JLabel lLenghtOfStep = new JLabel("Długość kroku: ");
+    JLabel lDistance = new JLabel("Dystans: ");
     JLabel lTimeToBeat = new JLabel("Czas do pokonania: ");
     JLabel lTimeToBeatinMinutes = new JLabel("min.");
     JLabel lTimeToBeatSeconds = new JLabel("sec.");

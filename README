@@ -1,0 +1,20 @@
+######################################
+#				     #
+#	Author: Steven Gumovvy	     #
+#	mail: 	pstifler8@gmail.com  #
+#				     #
+######################################
+
+Projected for runners.
+Cyclic step is a application which tells You how many steps you have to make
+to beat your life-time.
+
+Example:
+Steps in m: 1.9;
+Distance: 100
+Time to beat 0:13
+
+Program will calculate these datas and give you a summary.
+In future aplication will generate audio file for You, with each step you have to make.
+
+

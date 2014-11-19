@@ -150,7 +150,7 @@ public class RequiredMethods {
         }
     }
 
-    public void MOCKEDfunkcjaGlowna(float steps, long stepsPerSecond) throws InterruptedException {
+    public void funkcjaGlowna(float steps, long stepsPerSecond) throws InterruptedException {
 
         long currentTime = System.currentTimeMillis();
         for (int i = 0; i < steps; i++) {
